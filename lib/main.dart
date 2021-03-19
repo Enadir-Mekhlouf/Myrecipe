@@ -37,35 +37,38 @@ class MyApp extends StatelessWidget {
               )),
           body: SafeArea(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Container(
-                  color: Colors.black,
+                  margin: EdgeInsets.only(left: 20),
                   child: Column(
                     children: [
-                      Container(
-                        color: Colors.brown,
-                        child: Text(
-                          'Hi User !',
-                          style: TextStyle(color: Colors.grey),
+                      SizedBox(
+                        width: double.infinity,
+                        child: Container(
+                          child: Text(
+                            'Hi User !',
+                            style: TextStyle(color: Colors.grey),
+                            textAlign: TextAlign.left,
+                          ),
                         ),
                       ),
-                      Container(
-                          color: Colors.indigo,
-                          child: RichText(
-                            text: TextSpan(
-                              text: 'make your own food, \n stay at ',
-                              style:
-                                  TextStyle(color: Colors.black, fontSize: 20),
-                              children: [
-                                TextSpan(
-                                  text: 'home',
-                                  style: TextStyle(
-                                      color: Colors.orange, fontSize: 20),
-                                )
-                              ],
-                            ),
-                          )),
+                      SizedBox(
+                        width: double.infinity,
+                        child: Container(
+                            child: RichText(
+                          text: TextSpan(
+                            text: 'make your own food, \n stay at ',
+                            style: TextStyle(color: Colors.black, fontSize: 20),
+                            children: [
+                              TextSpan(
+                                text: 'home',
+                                style: TextStyle(
+                                    color: Colors.orange, fontSize: 20),
+                              )
+                            ],
+                          ),
+                        )),
+                      ),
                     ],
                   ),
                 ),
