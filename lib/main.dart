@@ -16,7 +16,6 @@ class MyApp extends StatelessWidget {
           appBar: AppBar(
               toolbarHeight: 50.0,
               backgroundColor: Colors.white,
-              centerTitle: true,
               title: Row(
                 children: [
                   Icon(
@@ -37,66 +36,82 @@ class MyApp extends StatelessWidget {
                 ],
               )),
           body: SafeArea(
-            child: Container(
-              color: Colors.blue,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Container(
-                    color: Colors.black,
-                    child: Column(
-                      children: [
-                        Container(
-                          color: Colors.brown,
-                          child: Text(
-                            'Hi User !',
-                            style: TextStyle(color: Colors.grey),
-                          ),
-                        ),
-                        Container(
-                            color: Colors.indigo,
-                            child: RichText(
-                              text: TextSpan(
-                                text: 'make your own food, \n stay at ',
-                                style: TextStyle(
-                                    color: Colors.black, fontSize: 20),
-                                children: [
-                                  TextSpan(
-                                    text: 'home',
-                                    style: TextStyle(
-                                        color: Colors.orange, fontSize: 20),
-                                  )
-                                ],
-                              ),
-                            )),
-                      ],
-                    ),
-                  ),
-                  Column(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Container(
+                  color: Colors.black,
+                  child: Column(
                     children: [
-                      Row(
-                        children: [
-                          Row(
+                      Container(
+                        color: Colors.brown,
+                        child: Text(
+                          'Hi User !',
+                          style: TextStyle(color: Colors.grey),
+                        ),
+                      ),
+                      Container(
+                          color: Colors.indigo,
+                          child: RichText(
+                            text: TextSpan(
+                              text: 'make your own food, \n stay at ',
+                              style:
+                                  TextStyle(color: Colors.black, fontSize: 20),
+                              children: [
+                                TextSpan(
+                                  text: 'home',
+                                  style: TextStyle(
+                                      color: Colors.orange, fontSize: 20),
+                                )
+                              ],
+                            ),
+                          )),
+                    ],
+                  ),
+                ),
+                Container(
+                    margin:
+                        EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: Row(
                             children: [
-                              Icon(Icons.search),
                               Container(
-                                width: 200,
-                                child: TextFormField(
-                                  decoration:
-                                      InputDecoration(labelText: 'search here'),
+                                width: 250,
+                                height: 50,
+                                child: TextField(
+                                  decoration: InputDecoration(
+                                    prefixIcon: Icon(Icons.search),
+                                    filled: true,
+                                    fillColor: Colors.grey[350],
+                                    labelText: 'find your today recipe',
+                                    border: new OutlineInputBorder(
+                                      borderRadius: const BorderRadius.all(
+                                        const Radius.circular(12.0),
+                                      ),
+                                    ),
+                                  ),
                                 ),
                               ),
                               Container(
-                                child: Icon(Icons.filter_1),
+                                margin: EdgeInsets.symmetric(horizontal: 15.0),
+                                decoration: BoxDecoration(
+                                    color: Colors.orange,
+                                    borderRadius: BorderRadius.all(
+                                        const Radius.circular(5.0))),
+                                child: Container(
+                                    child: Icon(
+                                  Icons.sort,
+                                  size: 40,
+                                )),
                               ),
                             ],
-                          )
-                        ],
-                      )
-                    ],
-                  )
-                ],
-              ),
+                          ),
+                        )
+                      ],
+                    ))
+              ],
             ),
           )),
     );
