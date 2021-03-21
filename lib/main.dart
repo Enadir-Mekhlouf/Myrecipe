@@ -142,7 +142,7 @@ class MyApp extends StatelessWidget {
                       // by zniber
                       NavigationButton('Breakfast', 'images/egg.svg'),
                       NavigationButton('Fast Food', 'images/burger.svg'),
-                      NavigationButton('Japanese', 'images/noodles.svg'),
+                      NavigationButton('JapaneSe', 'images/noodles.svg'),
                     ],
                   ),
                 )
