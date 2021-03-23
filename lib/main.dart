@@ -129,7 +129,7 @@ class MyApp extends StatelessWidget {
                             ),
                           ],
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),
@@ -139,10 +139,32 @@ class MyApp extends StatelessWidget {
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     children: [
-                      // by zniber
                       NavigationButton('Breakfast', 'images/egg.svg'),
                       NavigationButton('Fast Food', 'images/burger.svg'),
-                      NavigationButton('JapaneSe', 'images/noodles.svg'),
+                      NavigationButton('Japanese', 'images/noodles.svg'),
+                    ],
+                  ),
+                ),
+                //container in the body
+                Container(
+                  child: SizedBox(
+                    width: double.infinity,
+                    child: Container(
+                      margin: EdgeInsets.symmetric(horizontal: 10.0),
+                      child: Text('Popular Recipes',
+                          style: TextStyle(fontSize: 17.0)),
+                    ),
+                  ),
+                ),
+                //
+                Container(
+                  height: 170.0,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: [
+                      PopulareRecipe(),
+                      PopulareRecipe(),
+                      PopulareRecipe(),
                     ],
                   ),
                 )
@@ -152,6 +174,28 @@ class MyApp extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class PopulareRecipe extends StatelessWidget {
+  const PopulareRecipe({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        child: SizedBox(
+      height: 170,
+      width: 170,
+      child: Container(
+        margin: EdgeInsets.symmetric(horizontal: 10.0),
+        decoration: BoxDecoration(
+          border: Border.all(color: Colors.blueAccent),
+          borderRadius: BorderRadius.all(
+            const Radius.circular(15.0),
+          ),
+        ),
+      ),
+    ));
   }
 }
 
