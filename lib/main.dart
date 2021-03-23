@@ -162,9 +162,9 @@ class MyApp extends StatelessWidget {
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     children: [
-                      PopulareRecipe(),
-                      PopulareRecipe(),
-                      PopulareRecipe(),
+                      PopularRecipe("images/vinz.jpg"),
+                      PopularRecipe(""),
+                      PopularRecipe(""),
                     ],
                   ),
                 )
@@ -177,8 +177,9 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class PopulareRecipe extends StatelessWidget {
-  const PopulareRecipe({Key key}) : super(key: key);
+class PopularRecipe extends StatelessWidget {
+  final String picture;
+  const PopularRecipe(this.picture);
 
   @override
   Widget build(BuildContext context) {
@@ -189,6 +190,10 @@ class PopulareRecipe extends StatelessWidget {
       child: Container(
         margin: EdgeInsets.symmetric(horizontal: 10.0),
         decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(picture),
+            fit: BoxFit.cover,
+          ),
           border: Border.all(color: Colors.blueAccent),
           borderRadius: BorderRadius.all(
             const Radius.circular(15.0),
