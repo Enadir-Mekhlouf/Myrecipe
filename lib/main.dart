@@ -162,9 +162,9 @@ class MyApp extends StatelessWidget {
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     children: [
-                      PopularRecipe("images/vinz.jpg"),
-                      PopularRecipe(""),
-                      PopularRecipe(""),
+                      PopularRecipe("images/eggs.jpg"),
+                      PopularRecipe("images/stb.jpeg"),
+                      PopularRecipe("images/pancake.jpg"),
                     ],
                   ),
                 )
@@ -188,6 +188,10 @@ class PopularRecipe extends StatelessWidget {
       height: 170,
       width: 170,
       child: Container(
+        child: Align(
+          alignment: Alignment.topRight,
+          child: Icon(Icons.add_rounded),
+        ),
         margin: EdgeInsets.symmetric(horizontal: 10.0),
         decoration: BoxDecoration(
           image: DecorationImage(
