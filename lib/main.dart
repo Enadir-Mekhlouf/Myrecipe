@@ -190,7 +190,12 @@ class PopularRecipe extends StatelessWidget {
       child: Container(
         child: Align(
           alignment: Alignment.topRight,
-          child: Icon(Icons.add_rounded),
+          child: Container(
+            decoration: BoxDecoration(
+                color: Colors.grey[350],
+                borderRadius: BorderRadius.all(Radius.circular(20))),
+            child: Icon(Icons.bookmark_border_outlined),
+          ),
         ),
         margin: EdgeInsets.symmetric(horizontal: 10.0),
         decoration: BoxDecoration(
