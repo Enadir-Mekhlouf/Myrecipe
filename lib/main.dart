@@ -7,6 +7,8 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp();
+
+  get bottomAppBarContents => null;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -36,6 +38,11 @@ class MyApp extends StatelessWidget {
                 )
               ],
             )),
+        bottomNavigationBar: BottomAppBar(
+          color: Colors.white,
+          child: bottomAppBarContents,
+        ),
+        floatingActionButton: FloatingActionButton(onPressed: null),
         body: SafeArea(
           // all container
           child: Container(
