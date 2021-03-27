@@ -40,9 +40,21 @@ class MyApp extends StatelessWidget {
         bottomNavigationBar: BottomAppBar(
           color: Colors.blueAccent,
           child: Container(
-            child: IconButton(
-              icon: Icon(Icons.ac_unit),
-              onPressed: () {},
+            child: Row(
+              children: [
+                IconButton(
+                  icon: Icon(Icons.ac_unit),
+                  onPressed: () {},
+                ),
+                IconButton(
+                  icon: Icon(Icons.bookmark),
+                  onPressed: () {},
+                ),
+                IconButton(
+                  icon: Icon(Icons.favorite),
+                  onPressed: () {},
+                ),
+              ],
             ),
           ),
         ),
