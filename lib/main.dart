@@ -41,6 +41,7 @@ class MyApp extends StatelessWidget {
           color: Colors.blueAccent,
           child: Container(
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 IconButton(
                   icon: Icon(Icons.ac_unit),
