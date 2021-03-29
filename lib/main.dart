@@ -37,22 +37,35 @@ class MyApp extends StatelessWidget {
                 )
               ],
             )),
+        floatingActionButton: Container(
+          height: 65.0,
+          width: 65.0,
+          child: FittedBox(
+            child: FloatingActionButton(
+              backgroundColor: Colors.orange,
+              onPressed: () {},
+              child: Icon(
+                Icons.home,
+                color: Colors.white,
+              ),
+              // elevation: 5.0,
+            ),
+          ),
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         bottomNavigationBar: BottomAppBar(
-          color: Colors.blueAccent,
+          shape: CircularNotchedRectangle(),
+          color: Colors.white,
           child: Container(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 IconButton(
-                  icon: Icon(Icons.ac_unit),
+                  icon: Icon(Icons.add_circle),
                   onPressed: () {},
                 ),
                 IconButton(
-                  icon: Icon(Icons.bookmark),
-                  onPressed: () {},
-                ),
-                IconButton(
-                  icon: Icon(Icons.favorite),
+                  icon: Icon(Icons.bookmark_outlined),
                   onPressed: () {},
                 ),
               ],
@@ -215,7 +228,7 @@ class PopularRecipe extends StatelessWidget {
           alignment: Alignment.topRight,
           child: Container(
             decoration: BoxDecoration(
-                color: Colors.grey[350],
+                color: Colors.grey[350].withOpacity(0.5),
                 borderRadius: BorderRadius.all(Radius.circular(20))),
             child: Icon(Icons.bookmark_border_outlined),
           ),
