@@ -186,7 +186,8 @@ class MyApp extends StatelessWidget {
                   child: SizedBox(
                     width: double.infinity,
                     child: Container(
-                      margin: EdgeInsets.symmetric(horizontal: 10.0),
+                      margin:
+                          EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
                       child: Text('Popular Recipes',
                           style: TextStyle(fontSize: 17.0)),
                     ),
@@ -194,7 +195,7 @@ class MyApp extends StatelessWidget {
                 ),
                 //
                 Container(
-                  height: 170.0,
+                  height: 180,
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     children: [
@@ -203,7 +204,18 @@ class MyApp extends StatelessWidget {
                       PopularRecipe("images/pancake.jpg"),
                     ],
                   ),
-                )
+                ),
+                Container(
+                  child: SizedBox(
+                    width: double.infinity,
+                    child: Container(
+                      margin:
+                          EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
+                      child: Text('Most Viewed Recipes',
+                          style: TextStyle(fontSize: 17.0)),
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
@@ -220,32 +232,40 @@ class PopularRecipe extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        child: SizedBox(
-      height: 170,
-      width: 170,
-      child: Container(
-        child: Align(
-          alignment: Alignment.topRight,
-          child: Container(
-            decoration: BoxDecoration(
-                color: Colors.grey[350].withOpacity(0.5),
-                borderRadius: BorderRadius.all(Radius.circular(20))),
-            child: Icon(Icons.bookmark_border_outlined),
+      child: SizedBox(
+        height: 170,
+        width: 170,
+        child: Container(
+          child: Align(
+            alignment: Alignment.topRight,
+            child: SizedBox(
+              height: 36,
+              child: Container(
+                margin: EdgeInsets.all(5),
+                decoration: BoxDecoration(
+                  color: Colors.grey[350].withOpacity(0.35),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(8),
+                  ),
+                ),
+                child: Icon(Icons.bookmark_border_outlined),
+              ),
+            ),
           ),
-        ),
-        margin: EdgeInsets.symmetric(horizontal: 10.0),
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage(picture),
-            fit: BoxFit.cover,
-          ),
-          border: Border.all(color: Colors.blueAccent),
-          borderRadius: BorderRadius.all(
-            const Radius.circular(15.0),
+          margin: EdgeInsets.symmetric(horizontal: 10.0),
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage(picture),
+              fit: BoxFit.cover,
+            ),
+            //border: Border.all(color: Colors.blueAccent),
+            borderRadius: BorderRadius.all(
+              const Radius.circular(15.0),
+            ),
           ),
         ),
       ),
-    ));
+    );
   }
 }
 
@@ -257,7 +277,7 @@ class NavigationButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 7.5),
+      margin: EdgeInsets.symmetric(horizontal: 5),
       // ignore: deprecated_member_use
       child: FlatButton.icon(
         shape: RoundedRectangleBorder(
