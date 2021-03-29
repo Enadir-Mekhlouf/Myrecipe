@@ -269,6 +269,7 @@ class PopularRecipe extends StatelessWidget {
   }
 }
 
+// slide button
 class NavigationButton extends StatelessWidget {
   final String label;
   final String picture;
