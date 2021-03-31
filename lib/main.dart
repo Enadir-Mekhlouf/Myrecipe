@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      //remove debug banner
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
             elevation: 0,
             toolbarHeight: 50.0,
             backgroundColor: Colors.white,
+            //row icon and avatar
             title: Row(
               children: [
                 Icon(
@@ -37,6 +39,7 @@ class MyApp extends StatelessWidget {
                 )
               ],
             )),
+        // floating button (home icon)
         floatingActionButton: Container(
           height: 65.0,
           width: 65.0,
@@ -52,10 +55,13 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),
+        // the floating button inside bottom app bar and in the center
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        // bottom app bar
         bottomNavigationBar: BottomAppBar(
           shape: CircularNotchedRectangle(),
           color: Colors.white,
+          //inside bottom app bar (row)
           child: Container(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -72,10 +78,12 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),
+        //body
         body: SafeArea(
           // all container
           child: Container(
             color: Colors.white,
+            // all column
             child: Column(
               children: [
                 // container of text containt
