@@ -239,40 +239,65 @@ class PopularRecipe extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: SizedBox(
-        height: 170,
-        width: 170,
-        child: Container(
-          child: Align(
-            alignment: Alignment.topRight,
-            child: SizedBox(
-              height: 36,
-              child: Container(
-                margin: EdgeInsets.all(5),
-                decoration: BoxDecoration(
-                  color: Colors.grey[350].withOpacity(0.35),
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(8),
-                  ),
-                ),
-                child: Icon(Icons.bookmark_border_outlined),
+    return Column(
+      children: [
+        SizedBox(
+          height: 170,
+          width: 170,
+          child: Container(
+            margin: EdgeInsets.symmetric(horizontal: 10.0),
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(picture),
+                fit: BoxFit.cover,
+              ),
+              //border: Border.all(color: Colors.blueAccent),
+              borderRadius: BorderRadius.all(
+                const Radius.circular(15.0),
               ),
             ),
-          ),
-          margin: EdgeInsets.symmetric(horizontal: 10.0),
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage(picture),
-              fit: BoxFit.cover,
-            ),
-            //border: Border.all(color: Colors.blueAccent),
-            borderRadius: BorderRadius.all(
-              const Radius.circular(15.0),
+            child: Column(
+              children: [
+                Align(
+                  alignment: Alignment.topRight,
+                  child: SizedBox(
+                    height: 36,
+                    child: Container(
+                      margin: EdgeInsets.all(5),
+                      decoration: BoxDecoration(
+                        color: Colors.grey[350].withOpacity(0.35),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(8),
+                        ),
+                      ),
+                      child: Icon(Icons.bookmark_border_outlined),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 55,
+                ),
+                Column(
+                  children: [
+                    SizedBox(
+                      height: 70,
+                      width: 130,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.blue,
+                          borderRadius: BorderRadius.all(
+                            const Radius.circular(15.0),
+                          ),
+                        ),
+                      ),
+                    )
+                  ],
+                )
+              ],
             ),
           ),
         ),
-      ),
+      ],
     );
   }
 }
