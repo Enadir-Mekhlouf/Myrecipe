@@ -283,8 +283,26 @@ class PopularRecipe extends StatelessWidget {
                       height: 70,
                       width: 130,
                       child: Container(
+                        child: Column(
+                          children: [
+                            Text("potato"),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Icon(Icons.ac_unit),
+                                SizedBox(
+                                  height: 30,
+                                  width: 30,
+                                  child: Container(
+                                    color: Colors.black,
+                                  ),
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
                         decoration: BoxDecoration(
-                          color: Colors.blue,
+                          color: Colors.white,
                           borderRadius: BorderRadius.all(
                             const Radius.circular(15.0),
                           ),
