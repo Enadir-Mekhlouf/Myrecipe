@@ -34,8 +34,9 @@ class MyApp extends StatelessWidget {
                     print('icon clicked');
                   },
                   child: CircleAvatar(
-                      radius: 20.0,
-                      backgroundImage: AssetImage('images/vinz.jpg')),
+                    radius: 20.0,
+                    backgroundImage: AssetImage('images/vinz.jpg'),
+                  ),
                 )
               ],
             )),
@@ -285,19 +286,35 @@ class PopularRecipe extends StatelessWidget {
                       child: Container(
                         child: Column(
                           children: [
-                            Text("potato"),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Icon(Icons.ac_unit),
-                                SizedBox(
-                                  height: 30,
-                                  width: 30,
-                                  child: Container(
-                                    color: Colors.black,
+                            Text("potato lotato"),
+                            Container(
+                              margin: EdgeInsets.symmetric(
+                                  vertical: 10, horizontal: 5.0),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  CircleAvatar(
+                                    radius: 15.0,
+                                    backgroundImage:
+                                        AssetImage('images/vinz.jpg'),
                                   ),
-                                ),
-                              ],
+                                  SizedBox(
+                                    height: 30,
+                                    width: 50,
+                                    child: Container(
+                                      child: Row(
+                                        children: [
+                                          Icon(Icons.star_purple500_sharp,
+                                              color: Colors.orange),
+                                          Text("4.5")
+                                        ],
+                                      ),
+                                      //
+                                    ),
+                                  ),
+                                ],
+                              ),
                             )
                           ],
                         ),
