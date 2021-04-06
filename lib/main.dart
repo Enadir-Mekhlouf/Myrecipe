@@ -44,9 +44,16 @@ class MyApp extends StatelessWidget {
         floatingActionButton: Container(
           height: 65.0,
           width: 65.0,
+          decoration: BoxDecoration(
+            border: Border(
+              top: BorderSide(width: 1.0, color: Colors.lightBlue.shade50),
+            ),
+            // shape: BoxShape.circle,
+          ),
           child: FittedBox(
             child: FloatingActionButton(
               backgroundColor: Colors.orange,
+
               onPressed: () {},
               child: Icon(
                 Icons.home,
@@ -204,13 +211,16 @@ class MyApp extends StatelessWidget {
                 ),
                 //
                 Container(
-                  height: 180,
+                  height: 200,
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     children: [
-                      PopularRecipe("images/eggs.jpg"),
-                      PopularRecipe("images/stb.jpeg"),
-                      PopularRecipe("images/pancake.jpg"),
+                      PopularRecipe("images/eggs.jpg", "4", "images/vinz.jpg",
+                          "Nadir", "oats with mango slice and cream"),
+                      PopularRecipe("images/stb.jpeg", "4", "images/vinz.jpg",
+                          "Nadir", "it is"),
+                      PopularRecipe("images/pancake.jpg", "4",
+                          "images/vinz.jpg", "Nadir", "it is"),
                     ],
                   ),
                 ),
@@ -236,14 +246,20 @@ class MyApp extends StatelessWidget {
 
 class PopularRecipe extends StatelessWidget {
   final String picture;
-  const PopularRecipe(this.picture);
+  final String note;
+  final String iconp;
+  final String namep;
+  final String discription;
+
+  const PopularRecipe(
+      this.picture, this.note, this.iconp, this.namep, this.discription);
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         SizedBox(
-          height: 170,
+          height: 200,
           width: 170,
           child: Container(
             margin: EdgeInsets.symmetric(horizontal: 10.0),
@@ -262,7 +278,7 @@ class PopularRecipe extends StatelessWidget {
                 Align(
                   alignment: Alignment.topRight,
                   child: SizedBox(
-                    height: 36,
+                    height: 55,
                     child: Container(
                       margin: EdgeInsets.all(5),
                       decoration: BoxDecoration(
@@ -276,29 +292,29 @@ class PopularRecipe extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 55,
+                  height: 35,
                 ),
                 Column(
                   children: [
                     SizedBox(
-                      height: 70,
+                      height: 90,
                       width: 130,
                       child: Container(
                         child: Column(
                           children: [
-                            Text("potato lotato"),
+                            Text(discription),
                             Container(
                               margin: EdgeInsets.symmetric(
-                                  vertical: 10, horizontal: 5.0),
+                                  vertical: 5, horizontal: 5.0),
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   CircleAvatar(
                                     radius: 15.0,
-                                    backgroundImage:
-                                        AssetImage('images/vinz.jpg'),
+                                    backgroundImage: AssetImage(iconp),
                                   ),
+                                  Text(namep),
                                   SizedBox(
                                     height: 30,
                                     width: 50,
@@ -307,7 +323,7 @@ class PopularRecipe extends StatelessWidget {
                                         children: [
                                           Icon(Icons.star_purple500_sharp,
                                               color: Colors.orange),
-                                          Text("4.5")
+                                          Text(note),
                                         ],
                                       ),
                                       //
