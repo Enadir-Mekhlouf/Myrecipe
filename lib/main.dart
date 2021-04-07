@@ -215,10 +215,10 @@ class MyApp extends StatelessWidget {
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     children: [
-                      PopularRecipe("images/eggs.jpg", "4", "images/vinz.jpg",
-                          "Nadir", "oats with mango slice and cream"),
-                      PopularRecipe("images/stb.jpeg", "4", "images/vinz.jpg",
-                          "Nadir", "it is"),
+                      PopularRecipe("images/eggs.jpg", "4.9", "images/vinz.jpg",
+                          "Riya shaikh", "oats with mango slice and cream"),
+                      PopularRecipe("images/stb.jpeg", "4.5", "images/vinz.jpg",
+                          "Robert jay", "oats with strawberry and milk"),
                       PopularRecipe("images/pancake.jpg", "4",
                           "images/vinz.jpg", "Nadir", "it is"),
                     ],
