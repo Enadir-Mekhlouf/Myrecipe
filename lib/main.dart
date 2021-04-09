@@ -153,7 +153,7 @@ class MyApp extends StatelessWidget {
                                   prefixIcon: Icon(Icons.search),
                                   filled: true,
                                   fillColor: Colors.grey[100],
-                                  labelText: 'find your today recipe',
+                                  labelText: 'find your today Recipe',
                                   border: OutlineInputBorder(
                                     borderRadius: const BorderRadius.all(
                                       const Radius.circular(15.0),
