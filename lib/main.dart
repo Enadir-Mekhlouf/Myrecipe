@@ -235,6 +235,14 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                 ),
+                Container(
+                  child: Row(
+                    children: [
+                      Container(), //container 1
+                      Container(), // container 2
+                    ],
+                  ),
+                )
               ],
             ),
           ),
