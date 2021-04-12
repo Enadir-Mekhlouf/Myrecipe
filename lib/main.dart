@@ -211,14 +211,14 @@ class MyApp extends StatelessWidget {
                 ),
                 //
                 Container(
-                  height: 200,
+                  height: 220,
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     children: [
                       PopularRecipe("images/eggs.jpg", "4.9", "images/vinz.jpg",
-                          "Riya shaikh", "oats with mango slice and cream"),
+                          "Riya shaikh", "oats w"),
                       PopularRecipe("images/stb.jpeg", "4.5", "images/vinz.jpg",
-                          "Robert jay", "oats with strawberry and milk"),
+                          "Robert jay", "oats "),
                       PopularRecipe("images/pancake.jpg", "4",
                           "images/vinz.jpg", "Nadir", "it is"),
                     ],
@@ -267,8 +267,8 @@ class PopularRecipe extends StatelessWidget {
     return Column(
       children: [
         SizedBox(
-          height: 200,
-          width: 170,
+          height: 220,
+          width: 200,
           child: Container(
             margin: EdgeInsets.symmetric(horizontal: 10.0),
             decoration: BoxDecoration(
@@ -300,44 +300,46 @@ class PopularRecipe extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 35,
+                  height: 65,
                 ),
                 Column(
                   children: [
                     SizedBox(
                       height: 90,
-                      width: 130,
+                      width: 170,
                       child: Container(
                         child: Column(
                           children: [
-                            Text(discription),
+                            Expanded(child: Text(discription)),
                             Container(
                               margin: EdgeInsets.symmetric(
                                   vertical: 5, horizontal: 5.0),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  CircleAvatar(
-                                    radius: 15.0,
-                                    backgroundImage: AssetImage(iconp),
-                                  ),
-                                  Text(namep),
-                                  SizedBox(
-                                    height: 30,
-                                    width: 50,
-                                    child: Container(
-                                      child: Row(
-                                        children: [
-                                          Icon(Icons.star_purple500_sharp,
-                                              color: Colors.orange),
-                                          Text(note),
-                                        ],
-                                      ),
-                                      //
+                              child: Expanded(
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    CircleAvatar(
+                                      radius: 15.0,
+                                      backgroundImage: AssetImage(iconp),
                                     ),
-                                  ),
-                                ],
+                                    Text(namep),
+                                    SizedBox(
+                                      height: 30,
+                                      width: 50,
+                                      child: Container(
+                                        child: Row(
+                                          children: [
+                                            Icon(Icons.star_purple500_sharp,
+                                                color: Colors.orange),
+                                            Text(note),
+                                          ],
+                                        ),
+                                        //
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             )
                           ],
