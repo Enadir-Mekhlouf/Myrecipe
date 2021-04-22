@@ -238,7 +238,7 @@ class MyApp extends StatelessWidget {
                   ),
                   //TODO : this container need to be modified
                   Container(
-                    height: 220,
+                    height: 222,
                     child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: [
