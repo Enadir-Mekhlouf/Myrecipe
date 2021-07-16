@@ -5,9 +5,14 @@ void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp();
 
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -21,13 +26,11 @@ class MyApp extends StatelessWidget {
             backgroundColor: Colors.white,
             //row icon and avatar
             title: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Icon(
                   Icons.more_horiz,
                   color: Colors.black,
-                ),
-                SizedBox(
-                  width: 260.0,
                 ),
                 GestureDetector(
                   onTap: () {
@@ -145,6 +148,7 @@ class MyApp extends StatelessWidget {
                       children: [
                         Expanded(
                           child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Container(
                                 width: 250,
