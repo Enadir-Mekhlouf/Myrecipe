@@ -63,32 +63,30 @@ class PopularRecipe extends StatelessWidget {
                             Container(
                               margin: EdgeInsets.symmetric(
                                   vertical: 5, horizontal: 5.0),
-                              child: Expanded(
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    CircleAvatar(
-                                      radius: 15.0,
-                                      backgroundImage: AssetImage(iconp),
-                                    ),
-                                    Text(namep),
-                                    SizedBox(
-                                      height: 30,
-                                      width: 50,
-                                      child: Container(
-                                        child: Row(
-                                          children: [
-                                            Icon(Icons.star_purple500_sharp,
-                                                color: Colors.orange),
-                                            Text(note),
-                                          ],
-                                        ),
-                                        //
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  CircleAvatar(
+                                    radius: 15.0,
+                                    backgroundImage: AssetImage(iconp),
+                                  ),
+                                  Text(namep),
+                                  SizedBox(
+                                    height: 30,
+                                    width: 50,
+                                    child: Container(
+                                      child: Row(
+                                        children: [
+                                          Icon(Icons.star_purple500_sharp,
+                                              color: Colors.orange),
+                                          Text(note),
+                                        ],
                                       ),
+                                      //
                                     ),
-                                  ],
-                                ),
+                                  ),
+                                ],
                               ),
                             )
                           ],
