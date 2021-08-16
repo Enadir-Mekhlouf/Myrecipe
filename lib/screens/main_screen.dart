@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:myrecipe/widgets/navbutton.dart';
-import 'package:myrecipe/widgets/precipe.dart';
 import 'package:myrecipe/widgets/bottombar.dart';
 import 'package:myrecipe/widgets/bottomnavbar.dart';
-import 'package:myrecipe/widgets/Appbar.dart';
+import 'package:myrecipe/widgets/navbutton.dart';
+import 'package:myrecipe/widgets/precipe.dart';
 
 class Mainscreen extends StatefulWidget {
   static String id = 'main_screen';
@@ -16,7 +15,31 @@ class _MainscreenState extends State<Mainscreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //TODO:appbar
+      appBar: AppBar(
+        //remove appbar shadow
+        elevation: 0,
+        toolbarHeight: 50.0,
+        backgroundColor: Colors.white,
+        //row icon and avatar
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Icon(
+              Icons.more_horiz,
+              color: Colors.black,
+            ),
+            GestureDetector(
+              onTap: () {
+                print('icon clicked');
+              },
+              child: CircleAvatar(
+                radius: 20.0,
+                backgroundImage: AssetImage('images/vinz.jpg'),
+              ),
+            ),
+          ],
+        ),
+      ),
       floatingActionButton: Bottombar(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: Bottomnavbar(),

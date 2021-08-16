@@ -33,7 +33,10 @@ class _BottomnavbarState extends State<Bottomnavbar> {
             IconButton(
               icon: Icon(Icons.bookmark_outlined),
               onPressed: () {
-                Navigator.pushNamed(context, SavedPages.id);
+                //added
+                if (ModalRoute.of(context).settings.name != SavedPages.id) {
+                  Navigator.pushNamed(context, SavedPages.id);
+                }
               },
             ),
           ],
