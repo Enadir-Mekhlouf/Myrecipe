@@ -1,6 +1,7 @@
 # myrecipe
 
-A new Flutter project.
+# Description
+MyRecipe is a Flutter app designed to help you manage and organize your favorite recipes. It offers a user-friendly interface, allowing you to add, view, and categorize recipes. The app focuses on providing a seamless user experience and a visually pleasing UI/UX design.
 
 ## Getting Started
 
